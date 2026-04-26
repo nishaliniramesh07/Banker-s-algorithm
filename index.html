@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banker's Algorithm Visualizer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 🔥 Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<h1>🚀 Banker's Algorithm Dashboard</h1>
+
+<div class="container">
+
+    <!-- ⚙️ CONFIGURATION -->
+    <div class="card">
+        <h3>⚙️ Configuration</h3>
+
+        <label>Processes:</label>
+        <input type="number" id="processes" value="5" min="1">
+
+        <label>Resources:</label>
+        <input type="number" id="resources" value="3" min="1">
+
+        <br><br>
+
+        <button onclick="generateTables()">Generate Tables</button>
+    </div>
+
+    <!-- 📊 TABLES -->
+    <div class="card" id="tables">
+        <i>Tables will appear here after generation...</i>
+    </div>
+
+    <!-- ▶ EXECUTION -->
+    <div class="card">
+        <h3>▶ Execution</h3>
+
+        <button onclick="startExecution()">Start Simulation</button>
+
+        <!-- STATUS -->
+        <p id="status" class="status"></p>
+
+        <!-- 🔥 EXPLANATION PANEL -->
+        <div id="explanation" class="explanation-box">
+            <i>Step explanation will appear here...</i>
+        </div>
+
+        <!-- 🔥 SAFE SEQUENCE -->
+        <div class="sequence" id="sequence"></div>
+
+        <!-- 🔥 RESOURCE REQUEST SECTION -->
+        <hr style="margin:20px 0;">
+
+        <h3>📥 Resource Request</h3>
+
+        <label>Process:</label>
+        <input type="number" id="req-process" value="0" min="0">
+
+        <!-- Dynamic request inputs -->
+        <div id="request-inputs" style="margin-top:10px;">
+            <i>Generate tables to enter request vector...</i>
+        </div>
+
+        <button onclick="checkRequest()">Check Request</button>
+
+        <!-- RESULT -->
+        <p id="request-result"></p>
+    </div>
+
+</div>
+
+<!-- 🔥 SCRIPTS -->
+<script src="banker.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* 🔥 GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+}
+
+/* 🔥 TITLE */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* 🔥 GRID */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+/* 🔥 CARD */
+.card {
+    backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.01);
+}
+
+/* 🔥 INPUT */
+input {
+    width: 60px;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    color: black;
+}
+
+input:focus {
+    box-shadow: 0 0 8px rgba(0,255,200,0.6);
+}
+
+/* 🔥 BUTTON */
+button {
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgba(0,255,200,0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* 🔥 TABLE */
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+}
+
+td {
+    padding: 6px;
+}
+
+/* 🔥 ROW ANIMATION */
+tr {
+    transition: all 0.3s ease;
+}
+
+/* 🔥 SAFE PROCESS */
+.highlight {
+    background: rgba(255, 235, 59, 0.7) !important;
+    border-radius: 6px;
+    transform: scale(1.05);
+}
+
+/* 🔴 BLOCKED PROCESS */
+.blocked {
+    background: rgba(255, 77, 77, 0.6) !important;
+    border-radius: 6px;
+    transform: scale(1.05);
+}
+
+/* 🔥 STATUS */
+.status {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 🟢 SAFE */
+.safe {
+    color: #00ffae;
+    animation: glowGreen 1s infinite alternate;
+}
+
+/* 🔴 UNSAFE */
+.unsafe {
+    color: #ff4d4d;
+    animation: glowRed 1s infinite alternate;
+}
+
+/* 🟡 RUNNING */
+.running {
+    color: #ffd166;
+}
+
+/* 🔥 GLOW ANIMATIONS */
+@keyframes glowGreen {
+    from { text-shadow: 0 0 5px #00ffae; }
+    to { text-shadow: 0 0 15px #00ffae; }
+}
+
+@keyframes glowRed {
+    from { text-shadow: 0 0 5px #ff4d4d; }
+    to { text-shadow: 0 0 15px #ff4d4d; }
+}
+
+/* 🔥 SEQUENCE */
+.sequence {
+    margin-top: 10px;
+}
+
+.sequence span {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00ff87, #60efff);
+    color: black;
+    font-weight: bold;
+    animation: pop 0.4s ease;
+    box-shadow: 0 0 10px rgba(0,255,200,0.6);
+}
+
+/* 🔥 POP ANIMATION */
+@keyframes pop {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 🔥 EXPLANATION */
+.explanation-box {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.35);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+    min-height: 90px;
+    border-left: 4px solid #00ffae;
+    animation: fadeIn 0.5s ease;
+}
+
+.explanation-box b {
+    color: #00ffae;
+}
+
+.explanation-box .fail {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* 🔥 FADE IN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔥 REQUEST SECTION */
+#request-inputs table {
+    margin-top: 10px;
+}
+
+#request-result {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 🔥 DIVIDER */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #00ffae, transparent);
+}
